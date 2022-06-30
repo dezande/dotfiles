@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
 
   " Filetype specific plugins
-  Plug 'tpope/vim-rails'
   Plug 'mattn/emmet-vim'
   Plug 'elixir-editors/vim-elixir'
 
