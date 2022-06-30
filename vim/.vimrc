@@ -22,6 +22,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'skywind3000/gutentags_plus'
 
+  " Elixir
+  Plug 'elixir-editors/vim-elixir'
+
+  " Git
+  Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 set noerrorbells
@@ -34,10 +40,15 @@ set relativenumber
 
 set background=dark
 
+" gutentags_plus
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
 let g:gutentags_project_root = ['.root']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_plus_switch = 1
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Display whitespace characters
 set list
