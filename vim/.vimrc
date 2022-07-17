@@ -7,7 +7,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
   " Navigation
-  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'mileszs/ack.vim'
+  Plug 'tpope/vim-vinegar'
 
   " Filetype specific plugins
   Plug 'mattn/emmet-vim'
@@ -27,6 +28,7 @@ call plug#begin('~/.vim/plugged')
   " Git
   Plug 'tpope/vim-fugitive'
 
+  Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 set noerrorbells
@@ -44,10 +46,6 @@ let g:gutentags_modules = ['ctags', 'gtags_cscope']
 let g:gutentags_project_root = ['.root']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_plus_switch = 1
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 " Display whitespace characters
 set list
