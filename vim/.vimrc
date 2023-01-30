@@ -5,51 +5,27 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 endif
 
 call plug#begin('~/.vim/plugged')
-
-  " Navigation
-  Plug 'mileszs/ack.vim'
-  Plug 'tpope/vim-vinegar'
-
-  " Filetype specific plugins
-  Plug 'mattn/emmet-vim'
-  Plug 'elixir-editors/vim-elixir'
-
-  " Theming
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-
-  " Tag management
-  Plug 'ludovicchabant/vim-gutentags'
-  Plug 'skywind3000/gutentags_plus'
-
-  " Elixir
-  Plug 'elixir-editors/vim-elixir'
-
-  " Git
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'kien/ctrlp.vim'
+  Plug 'vim-syntastic/syntastic'
   Plug 'tpope/vim-fugitive'
+  Plug 'mattn/emmet-vim'
 
-  Plug 'christoomey/vim-tmux-navigator'
+  " Plug 'mileszs/ack.vim'
+  " Plug 'tpope/vim-vinegar'
+  " Plug 'ludovicchabant/vim-gutentags'
+  " Plug 'skywind3000/gutentags_plus'
 call plug#end()
 
-set noerrorbells
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
+set encoding=UTF-8
 
-set relativenumber
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-set background=dark
-
-" gutentags_plus
-let g:gutentags_modules = ['ctags', 'gtags_cscope']
-let g:gutentags_project_root = ['.root']
-let g:gutentags_cache_dir = expand('~/.cache/tags')
-let g:gutentags_plus_switch = 1
-
-" Display whitespace characters
-set list
-set listchars=tab:>─,eol:¬,trail:\ ,nbsp:¤
-
-set fillchars=vert:│
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
